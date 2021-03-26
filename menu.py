@@ -1,3 +1,4 @@
+from PySide6.QtGui import QFontDatabase
 from PySide6.QtWidgets import QApplication, QMainWindow, QMdiArea
 
 from ui.sidemenu import SideMenu
@@ -12,9 +13,9 @@ class MdiArea(QMdiArea):
         self.content= Content(self) 
         self.overlay = Overlay(self)
 
-        self.addSubWindow(self.menu)
         self.addSubWindow(self.content)
         self.addSubWindow(self.overlay)
+        self.addSubWindow(self.menu)
 
     def resizeEvent(self, event):
         self.content.resize(self.width(), self.height())
@@ -31,6 +32,10 @@ if __name__ == "__main__":
     import sys 
 
     app = QApplication([])
+
+    font_db = QFontDatabase()
+    font_id = font_db.addApplicationFont("res/fonts/Roboto-Black.ttf")
+
     w = MainWindow()
     w.resize(800, 600)
     w.show()

@@ -22,11 +22,11 @@ class WidgetContent(QWidget):
         self.animation.setEndValue(QSize(270, self.mdi.height()))
         self.animation.start()
 
-        self.mdi.menu.show()
         self.mdi.overlay.show()
-        self.mdi.setActiveSubWindow(self.mdi.menu)
+        self.mdi.menu.show()
         self.mdi.setActiveSubWindow(self.mdi.overlay)
-
+        self.mdi.setActiveSubWindow(self.mdi.menu)
+        
     def paintEvent(self, event):
         opt = QStyleOption()
         opt.initFrom(self)
