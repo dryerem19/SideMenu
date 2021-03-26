@@ -34,7 +34,8 @@ if __name__ == "__main__":
     app = QApplication([])
 
     font_db = QFontDatabase()
-    font_id = font_db.addApplicationFont("res/fonts/Roboto-Black.ttf")
+    font_db.addApplicationFont("res/fonts/Roboto-Black.ttf")
+    font_db.addApplicationFont("res/fonts/Roboto-Light.ttf")
 
     w = MainWindow()
     w.resize(800, 600)

@@ -128,7 +128,7 @@ class Profile(QWidget):
 
         self.username = QLabel(self)
         self.username.setStyleSheet("color: white;")
-        self.username.setFont(QFont("Roboto Black", 12))
+        self.username.setFont(QFont("Roboto Light", 14))
         self.username.setCursor(Qt.PointingHandCursor)
         self.username.setAttribute(Qt.WA_TranslucentBackground)
         self.username.setText("dryerem19")
@@ -152,7 +152,7 @@ class SideMenuWidget(QWidget):
         super(SideMenuWidget, self).__init__()
         self.layout = QVBoxLayout()
         self.layout.setContentsMargins(0, 0, 0, 0)
-        self.layout.setSpacing(0)
+        self.layout.setSpacing(12)
         self.setLayout(self.layout)
 
         # PROFILE
@@ -173,26 +173,26 @@ class SideMenuWidget(QWidget):
 
         _margins = 16 # left margin
 
-        self.app_name = LinkLabel(self.labels, "color: rgba(0, 0, 0, 60%)", "color: rgba(0, 0, 0, 40%)")
+        self.app_name = LinkLabel(self.labels, "color: rgba(0, 0, 0, 80%)", "color: rgba(0, 0, 0, 60%)")
         self.app_name.setText("sidemenu app")
-        self.app_name.setFont(QFont("Roboto Black", 12))
+        self.app_name.setFont(QFont("Roboto Light", 12))
         self.app_name.move(self.labels.x() + _margins, self.labels.y())
 
-        self.app_ver = LinkLabel(self.labels, "color: rgba(0, 0, 0, 40%)", "color: rgba(0, 0, 0, 40%)")
-        self.app_ver.setText("1.0.0")
-        self.app_ver.setFont(QFont("Roboto Black", 11))
+        self.app_ver = LinkLabel(self.labels, "color: rgba(0, 0, 0, 60%)", "color: rgba(0, 0, 0, 60%)")
+        self.app_ver.setText("Версия 1.0.0")
+        self.app_ver.setFont(QFont("Roboto Light", 11))
         self.app_ver.move(self.labels.x() + _margins, self.labels.y() + _margins * 2)
 
         self.lbl = QLabel(self.labels)
         self.lbl.setText("-")
-        self.lbl.setStyleSheet("color: rgba(0, 0, 0, 30%)")
-        self.lbl.setFont(QFont("Roboto Black", 11))
-        self.lbl.move(self.labels.x() + _margins * 4, self.labels.y() + _margins * 2)
+        self.lbl.setStyleSheet("color: rgba(0, 0, 0, 60%)")
+        self.lbl.setFont(QFont("Roboto Light", 11))
+        self.lbl.move(self.labels.x() + _margins * 7, self.labels.y() + _margins * 2)
 
-        self.app_about = LinkLabel(self.labels, "color: rgba(0, 0, 0, 40%)", "color: rgba(0, 0, 0, 40%)")
+        self.app_about = LinkLabel(self.labels, "color: rgba(0, 0, 0, 60%)", "color: rgba(0, 0, 0, 60%)")
         self.app_about.setText("О программе")
-        self.app_about.setFont(QFont("Roboto Black", 11))
-        self.app_about.move(self.labels.x() + _margins * 5, self.labels.y() + _margins * 2)
+        self.app_about.setFont(QFont("Roboto Light", 11))
+        self.app_about.move(self.labels.x() + _margins * 8, self.labels.y() + _margins * 2)
 
         self.setStyleSheet("background: white;")
 
